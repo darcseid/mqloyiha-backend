@@ -7,8 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const BOT_TOKEN = "8636053141:AAHTui71-duw72LISbNZlYANOGzC3DZgt3w";
-const CHAT_ID = "8629925807";
+const BOT_TOKEN = process.env.BOT_TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 
 app.post("/api/contact", async (req, res) => {
     try {
